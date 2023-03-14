@@ -1,5 +1,5 @@
 
-program untitled;
+program ejercicio1;
 
 uses crt;
 var i : byte;
