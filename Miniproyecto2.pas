@@ -13,7 +13,7 @@ num1 : longint;
 		begin
 		if v1 mod 2=0 then
 			begin
-			WriteLn('su valor es divisible entre 2:');
+			WriteLn('Su valor es divisible entre 2:');
 			textColor(yellow);WriteLn('[',v1,']');
 			textcolor(white);
 			WriteLn('--------------------------------------');
@@ -21,7 +21,7 @@ num1 : longint;
 		
 		if v1 mod 3=0 then
 			begin
-			WriteLn('su valor es divisible entre 3:');
+			WriteLn('Su valor es divisible entre 3:');
 			textColor(blue);WriteLn('[',v1,']');
 			textcolor(white);
 			WriteLn('--------------------------------------');
@@ -29,7 +29,7 @@ num1 : longint;
 			
 		if v1 mod 5=0 then
 			begin
-			WriteLn('su valor es divisible entre 5:');
+			WriteLn('Su valor es divisible entre 5:');
 			textColor(red);WriteLn('[',v1,']');
 			textcolor(white);
 			WriteLn('--------------------------------------');
@@ -37,14 +37,14 @@ num1 : longint;
 			
 		if v1 mod 7=0 then
 			begin
-			WriteLn('su valor es divisible entre 7:');
+			WriteLn('Su valor es divisible entre 7:');
 			textColor(green);WriteLn('[',v1,']');
 			textcolor(white);
 			WriteLn('--------------------------------------');
 			end;
 		if v1 mod 13=0 then
 			begin
-			WriteLn('su valor es divisible entre 13:');
+			WriteLn('Su valor es divisible entre 13:');
 			textColor(brown);WriteLn('[',v1,']');
 			textcolor(white);
 			WriteLn('--------------------------------------');
@@ -58,16 +58,26 @@ num1 : longint;
 BEGIN
 	clrscr();
 	// en esta parte agregamos la pregunta para ingresar el dato//
-	writeln('ingrese un numero');
-	readln (num1);
+	gotoxy(45,1);writeln('==============');
+	gotoxy(45,2);writeln('Bienvenido sea');
+	gotoxy(45,3);writeln('==============');
+	write('Ingrese un numero mayor a cero para saber en que color se va a imprimir:');
+	readln(num1);
+	writeln('==============================================================================');
 	while num1<=0 do
 	begin
 	writeln('Dato invalido, porfavor escoga un numero positivo y que sea mayor que cero');
 	readln(num1);
 	end;
 	divisibilidad(num1);
-	readln();
+	
 			//agregando sentencia repetitiva para numeros menores he iguales que 0//
-		
+		writeln('');					
+	textcolor(15);
+	writeln('========================');
+	writeln('///Que tenga buen dia///');
+	writeln('========================');
+	readln();
 END.
+//finalizando el programa agregando ahora si la funcion//
 
