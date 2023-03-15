@@ -49,7 +49,12 @@ num1 : longint;
 			//agregando la falta de coincidencia con los datos necesarios//
   
 BEGIN
-	
+	clrscr();
+	// en esta parte agregamos la pregunta para ingresar el dato//
+	writeln('ingrese un numero');
+	readln (num1);
+	divisibilidad(num1);
+	readln();
 	
 			
 END.
