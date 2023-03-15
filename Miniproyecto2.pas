@@ -63,5 +63,14 @@ BEGIN
 								writeln('[',num1,']');
 								writeln('');
 							end;
+					//agregando la posibilidad de que no conacuerde con los valores mencionados//
+								begin
+									if (num1 mod 2<>0) and (num1 mod 3<>0) and (num1 mod 5<>0) and (num1 mod 7<>0) and (num1 mod 13<>0) then 
+									writeln('Su valor no es divisible entre ninguno de los datos necesarios:','[',num1,']')
+								end;
+	writeln('');					
+	textcolor(15);
+	writeln('///Que tenga buen dia///');
+			
 END.
 
