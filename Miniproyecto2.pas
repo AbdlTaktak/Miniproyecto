@@ -6,7 +6,7 @@ program ejercicio2;
 uses crt;
 var 
 // agregando una variable//
-num1 : integer;
+num1 : longint;
 
 BEGIN
 	//inicindo el ejercicio 2//
