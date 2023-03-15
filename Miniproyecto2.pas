@@ -16,7 +16,7 @@ num1 : longint;
 			WriteLn('su valor es divisible entre 2:');
 			textColor(yellow);WriteLn('[',v1,']');
 			
-		end;
+			end;
 		
 		if v1 mod 3=0 then
 			begin
@@ -43,6 +43,10 @@ num1 : longint;
 			textColor(brown);WriteLn('[',v1,']');
 			end;
 		//introduciendo las diferentes posibilidades dentro de la funcion//
+					if (v1 mod 2<>0) and (v1 mod 3<>0) and (v1 mod 5<>0) and (v1 mod 7<>0) and (v1 mod 13<>0) then
+					writeln('Su valor no es divisible entre ninguno de los datos necesarios:','[',num1,']')
+					end;
+			//agregando la falta de coincidencia con los datos necesarios//
   
 BEGIN
 	
