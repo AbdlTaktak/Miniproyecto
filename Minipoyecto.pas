@@ -1,10 +1,9 @@
-
 program ejercicio1;
 
 uses crt;
 var 
 texto : string;
-num, opcion: integer;
+opcion, opciontexto, opciontraduccion: integer;
 	// agregando las variables iniciales //
 	
 	//agregando el procedure del traductor a binario//
@@ -206,6 +205,7 @@ begin
 
  end;
 end; 
+//agregando el procedure del octal//
 procedure convertiroctal(texto1:string);
 var
 n1,ordi, resto, val,valor1,valor2,valor3:integer;
@@ -241,7 +241,10 @@ until ordi<=0;
  end;
 
 BEGIN
+//agrego de sentencia repetitiva desde el principio para crear un bucle//
+repeat
 // agregando estructurra basica del programa//
+clrscr();
 textcolor(green);
 	gotoxy(43,1);writeln('==================');
 	gotoxy(45,2);writeln('Bienvenido sea');
@@ -252,6 +255,11 @@ textcolor(green);
 	write('Porfavor escriba alguna frase:');
 	readln(texto);
 	writeln('==================================');
+	writeln('');
+	
+	repeat
+	
+	
 	writeln('');
 	writeln('En que desea que la frase sea transformada:');
 	writeln('/ 1.- Binario');
@@ -273,27 +281,71 @@ textcolor(green);
 	textcolor(white);
 	writeln('------------------------------------------------------------------------');
 	writeln('su resultado es:');
-	convertirromano(texto);
-	writeln(' ');
+	convertirbinario(texto);
+	write(' ');
 	writeln('========================================================================');
+	
+	writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+	readln(opciontraduccion);
+	
+	if opciontraduccion = 2 then 
+	begin
+		writeln('Desea traducir otro texto? si(1) o no(2)');
+		readln(opciontexto);
+	end;
 	
 	end;
 	//agregaando el resultado del procedure de los romanos//
-	2:
+	2: 
 	begin
 	clrscr;
 	textcolor(green);
-	gotoxy(45,1);writeln('=======================');
+	gotoxy(45,1);writeln('========================');
 	gotoxy(45,2);writeln('Usted ha escogido octal');
-	gotoxy(45,3);writeln('=======================');
+	gotoxy(45,3);writeln('========================');
+	textcolor(white);
+	writeln('------------------------------------------------------------------------');
+	writeln('su resultado es:');
+	convertiroctal(texto);
+	writeln(' ');
+	writeln('========================================================================');
+	
+	writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+	readln(opciontraduccion);
+	
+	if opciontraduccion = 2 then 
+	begin
+		writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+		readln(opciontexto);
+	end;
+	
+	
+	//agregando los resulttados del procedure del octal//
 	end; 
 	3:
 	begin
 	clrscr;
 	textcolor(green);
 	gotoxy(45,1);writeln('=============================');
-	gotoxy(45,2);writeln('Usted ha escogido hexadecimal');
+	gotoxy(45,2);writeln('Usted ha escogido Hexadecimal');
 	gotoxy(45,3);writeln('=============================');
+	textcolor(white);
+	writeln('------------------------------------------------------------------------');
+	writeln('su resultado es:');
+	
+	writeln(' ');
+	writeln('========================================================================');
+	
+	writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+	readln(opciontraduccion);
+	
+	if opciontraduccion = 2 then 
+	begin
+		writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+		readln(opciontexto);
+	end;
+	
+	
 	end; 
 	4: 
 	begin
@@ -309,6 +361,16 @@ textcolor(green);
 	writeln(' ');
 	writeln('========================================================================');
 	
+	writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+	readln(opciontraduccion);
+	
+	if opciontraduccion = 2 then 
+	begin
+		writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
+		readln(opciontexto);
+	end;
+	
+	
 	
 	end;
 	
@@ -319,8 +381,21 @@ textcolor(green);
 	gotoxy(45,2);writeln('///Que tenga buen dia///');
 	gotoxy(45,3);writeln('========================');
 	read();
+	
+	opciontraduccion := 2;
+	opciontexto := 2;
 	end;
 	end;
 	
+	until opciontraduccion = 2;
+	
+	until opciontexto = 2;
+	begin
+	clrscr;
+	gotoxy(45,1);writeln('========================');
+	gotoxy(45,2);writeln('///Que tenga buen dia///');
+	gotoxy(45,3);writeln('========================');
+	read();
+	end;
 END.
 
