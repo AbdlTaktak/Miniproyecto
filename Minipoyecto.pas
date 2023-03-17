@@ -235,7 +235,12 @@ BEGIN
 	writeln('Usted ha escogido binario');
 	convertirbinario(texto);
 	end;
-	
+	//agregaando el resultado del procedure de los romanos//
+	4: 
+	begin
+	writeln('usted ha escogido Romano');
+	convertirromano(texto);
+	end;
 	
 	5:
 	begin
