@@ -2,10 +2,12 @@
 program ejercicio1;
 
 uses crt;
-var i : byte;
+var 
+texto : string;
+num, opcion: integer;
+	// agregando las variables iniciales //
+begin
 
-BEGIN
-	
 	
 END.
 
