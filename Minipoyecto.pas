@@ -362,7 +362,7 @@ textcolor(green);
 	convertiroctal(texto);
 	writeln(' ');
 	writeln('========================================================================');
-	
+	//agregando el resultado del procedure del hexadecimal//
 	writeln('////Desea traducir el texto a otro codec? si(1) o no(2)////');
 	readln(opciontraduccion);
 	
