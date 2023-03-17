@@ -13,11 +13,11 @@ var
 n1,ordi:integer;
 begin
  
- 
+ //primero cambiando el texto a decimal utilizando la tabla ascii//
  for n1:= 1 to Length(texto1) do
  begin
  ordi:=ord(texto1[n1]);
- 
+ // seguidamente usando if entre las diferentes cantidades divisorias que se utilizan para su conversion//
   if ordi>=128 then 
   begin
   write('1');
