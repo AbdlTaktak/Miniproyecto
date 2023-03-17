@@ -94,7 +94,44 @@ begin
   end;
   
 begin
-
+BEGIN
+// agregando estructurra basica del programa//
+	gotoxy(45,1);writeln('==============');
+	gotoxy(45,2);writeln('Bienvenido sea');
+	gotoxy(45,3);writeln('==============');
 	
+	
+
+	write('Porfavor escriba alguna frase:');
+	readln(texto);
+	
+
+	writeln('En que desea que la frase sea transformada');
+	writeln('1.- Binario');
+	writeln('2.- Octal');
+	writeln('3.- Hexadecimal');
+	writeln('4.- Romanos');
+	writeln('5.- Salir del programa');
+	readln(opcion);
+	//agregando un case para las distintas posibilidades //
+	case opcion of 
+	1:
+	begin 
+	//agregando el resultado del procedure a la primera posibilidad//
+	writeln('Usted ha escogido binario');
+	convertirbinario(texto);
+	end;
+	
+	
+	5:
+	begin
+	clrscr;
+	gotoxy(45,1);writeln('========================');
+	gotoxy(45,2);writeln('///Que tenga buen dia///');
+	gotoxy(45,3);writeln('========================');
+	read();
+	end;
+	end;
+	end;
 END.
 
