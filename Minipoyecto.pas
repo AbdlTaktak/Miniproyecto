@@ -334,7 +334,9 @@ textcolor(green);
 	textcolor(white);
 	writeln('------------------------------------------------------------------------');
 	writeln('su resultado es:');
+	
 	convertirbinario(texto);
+	
 	write(' ');
 	writeln('========================================================================');
 	
@@ -359,7 +361,9 @@ textcolor(green);
 	textcolor(white);
 	writeln('------------------------------------------------------------------------');
 	writeln('su resultado es:');
+	
 	convertiroctal(texto);
+	
 	writeln(' ');
 	writeln('========================================================================');
 	//agregando el resultado del procedure del hexadecimal//
@@ -385,7 +389,7 @@ textcolor(green);
 	textcolor(white);
 	writeln('------------------------------------------------------------------------');
 	writeln('su resultado es:');
-	readln(texto);
+	
 	convertirhexa(texto);
 	
 	writeln(' ');
