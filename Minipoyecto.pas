@@ -206,40 +206,110 @@ begin
 
  end;
 end; 
+procedure convertiroctal(texto1:string);
+var
+n1,ordi, resto, val,valor1,valor2,valor3:integer;
+begin
+ 
+ 
+ for n1:= 1 to Length(texto) do
+ begin
+ val:= 1;
+ ordi:=ord(texto[n1]);
 
+ repeat  
+resto:=ordi mod 8;
+ordi:= ordi div 8;
+
+
+			if val = 1 then
+			valor1:= resto;
+			if val = 2 then 
+			valor2:= resto;
+			if val = 3 then 
+			valor3:= resto;
+
+val:= val + 1;
+until ordi<=0;
+				if val = 4 then write(valor3, valor2, valor1, ' ');
+				if val = 3 then write(valor2, valor1, ' ');
+ end;
+ 
+ write(' ');
+ 
+
+ end;
 
 BEGIN
 // agregando estructurra basica del programa//
-	gotoxy(45,1);writeln('==============');
+textcolor(green);
+	gotoxy(43,1);writeln('==================');
 	gotoxy(45,2);writeln('Bienvenido sea');
-	gotoxy(45,3);writeln('==============');
-	
+	gotoxy(43,3);writeln('==================');
+	textcolor(white);
 	
 
 	write('Porfavor escriba alguna frase:');
 	readln(texto);
-	
-
-	writeln('En que desea que la frase sea transformada');
-	writeln('1.- Binario');
-	writeln('2.- Octal');
-	writeln('3.- Hexadecimal');
-	writeln('4.- Romanos');
-	writeln('5.- Salir del programa');
+	writeln('==================================');
+	writeln('');
+	writeln('En que desea que la frase sea transformada:');
+	writeln('/ 1.- Binario');
+	writeln('/// 2.- Octal');
+	writeln('///// 3.- Hexadecimal');
+	writeln('/////// 4.- Romanos');
+	writeln('///////// 5.- Salir del programa');
 	readln(opcion);
 	//agregando un case para las distintas posibilidades //
 	case opcion of 
 	1:
 	begin 
 	//agregando el resultado del procedure a la primera posibilidad//
-	writeln('Usted ha escogido binario');
-	convertirbinario(texto);
+	clrscr;
+	textcolor(green);
+	gotoxy(45,1);writeln('=========================');
+	gotoxy(45,2);writeln('Usted ha escogido binario');
+	gotoxy(45,3);writeln('=========================');
+	textcolor(white);
+	writeln('------------------------------------------------------------------------');
+	writeln('su resultado es:');
+	convertirromano(texto);
+	writeln(' ');
+	writeln('========================================================================');
+	
 	end;
 	//agregaando el resultado del procedure de los romanos//
+	2:
+	begin
+	clrscr;
+	textcolor(green);
+	gotoxy(45,1);writeln('=======================');
+	gotoxy(45,2);writeln('Usted ha escogido octal');
+	gotoxy(45,3);writeln('=======================');
+	end; 
+	3:
+	begin
+	clrscr;
+	textcolor(green);
+	gotoxy(45,1);writeln('=============================');
+	gotoxy(45,2);writeln('Usted ha escogido hexadecimal');
+	gotoxy(45,3);writeln('=============================');
+	end; 
 	4: 
 	begin
-	writeln('usted ha escogido Romano');
+	clrscr;
+	textcolor(green);
+	gotoxy(45,1);writeln('========================');
+	gotoxy(45,2);writeln('Usted ha escogido Romano');
+	gotoxy(45,3);writeln('========================');
+	textcolor(white);
+	writeln('------------------------------------------------------------------------');
+	writeln('su resultado es:');
 	convertirromano(texto);
+	writeln(' ');
+	writeln('========================================================================');
+	
+	
 	end;
 	
 	5:
