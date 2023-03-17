@@ -92,8 +92,122 @@ begin
   
   
   end;
-  
+  //añadiendo el procedure del traductor a romano//
+  procedure convertirromano(texto1:string);
+var
+n1,ordi, resto:integer;
 begin
+ 
+ for n1:= 1 to Length(texto1) do
+ begin
+ ordi:=ord(texto1[n1]);
+ 
+ if ordi>=100 then 
+ begin
+ resto:= ordi - 100;
+ write('C');
+ ordi:= resto;
+ end;
+ if ordi>=100 then 
+ begin
+ resto:= ordi - 100;
+ write('C');
+ ordi:= resto;
+ end;
+ if ordi>=100 then 
+ begin
+ resto:= ordi - 100;
+ write('C');
+ ordi:= resto;
+ end;
+	
+	if ordi>=90 then 
+	begin
+	resto:= ordi - 90;
+	write('XC');
+	ordi:= resto;
+	end;
+ 
+		if ordi>=50 then 
+		begin
+		resto:= ordi - 50;
+		write('L');
+		ordi:= resto;
+		end;
+ 
+ 
+			if ordi>=40 then 
+			begin
+			resto:= ordi - 40;
+			write('XL');
+			ordi:= resto;
+			end;
+ 
+				if ordi>=10 then 
+				begin
+				resto:= ordi - 10;
+				write('X');
+				ordi:= resto;
+				end;
+				if ordi>=10 then 
+				begin
+				resto:= ordi - 10;
+				write('X');
+				ordi:= resto;
+				end;
+				if ordi>=10 then 
+				begin
+				resto:= ordi - 10;
+				write('X');
+				ordi:= resto;
+				end;
+				if ordi>=9 then 
+				begin
+				resto:= ordi - 9;
+				write('IX');
+				ordi:= resto;
+				end;
+ 
+					if ordi>=5 then 
+					begin
+					resto:= ordi - 5;
+					write('V');
+					ordi:= resto;
+					end;
+					if ordi>=4 then 
+					begin
+					resto:= ordi - 4;
+					write('IV');
+					ordi:= resto;
+					end;
+ 
+						if ordi>=1 then 
+						begin
+						resto:= ordi - 1;
+						write('I');
+						ordi:= resto;
+						end;
+						if ordi>=1 then 
+						begin
+						resto:= ordi - 1;
+						write('I');
+						ordi:= resto;
+						end;
+						if ordi>=1 then 
+						begin
+						resto:= ordi - 1;
+						write('I');
+						ordi:= resto;
+						end;
+
+
+ write(' ');
+ 
+
+ end;
+end; 
+
+
 BEGIN
 // agregando estructurra basica del programa//
 	gotoxy(45,1);writeln('==============');
@@ -132,6 +246,6 @@ BEGIN
 	read();
 	end;
 	end;
-	end;
+	
 END.
 
