@@ -239,7 +239,60 @@ until ordi<=0;
  
 
  end;
+ //agregando el procedure del hexadecimal//
+procedure convertirhexa(texto1:string);
 
+var 
+n1,ordi, resto :integer;
+
+BEGIN
+ 
+ for n1:= 1 to Length(texto) do
+ begin
+ ordi:=ord(texto[n1]);
+ 
+ repeat  
+
+
+if ordi mod 16=10 then
+begin
+write('A')
+end;
+
+if ordi mod 16=11 then
+begin
+write('B');
+end;
+
+if ordi mod 16=12 then
+begin
+write('C');
+end;
+
+if ordi mod 16=13 then
+begin
+write('D');
+end;
+
+if ordi mod 16=14 then
+begin
+write('E');
+end;
+
+if ordi mod 16=15 then
+begin
+write('F');
+end;
+
+resto:=ordi mod 16;
+ordi:= ordi div 16;
+write(resto);
+write('');
+write(' ');
+until ordi<=0;
+ end; 
+	end;
+	
 BEGIN
 //agrego de sentencia repetitiva desde el principio para crear un bucle//
 repeat
@@ -332,6 +385,8 @@ textcolor(green);
 	textcolor(white);
 	writeln('------------------------------------------------------------------------');
 	writeln('su resultado es:');
+	readln(texto);
+	convertirhexa(texto);
 	
 	writeln(' ');
 	writeln('========================================================================');
